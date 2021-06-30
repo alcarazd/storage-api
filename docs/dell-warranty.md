@@ -39,3 +39,22 @@ Prefijos de almacenamiento:
 Tablas de Base de Datos
 
 > Pendiente o Nulo
+
+Para el control del sistema de garantias, tendremos las siguientes entidades:
+
+	Usuario(Nombre,estatus,num_empleado)
+	Equipo(servicetag,fecha_ingreso,marca,fecha_expiracion)
+
+
+
+##Operaciones de Almacenamiento de datos 
+
+	#Operacion de Usuario
+	#Registrar usuario
+	  -Solicitar nombre y numero de empleado
+	  -El numero de empleado se asigna a todos los empleados
+	
+	#Operacion de equipos
+	 -Solicitar servicetag, fecha de ingreso
+	 -La fecha de expiracion se buscara en /dell/info/<id>
+
