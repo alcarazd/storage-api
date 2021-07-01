@@ -53,8 +53,45 @@ Para el control del sistema de garantias, tendremos las siguientes entidades:
 	#Registrar usuario
 	  -Solicitar nombre y numero de empleado
 	  -El numero de empleado se asigna a todos los empleados
+	#Actualizacion de usuario
+	  -Dar de baja usuarios
 	
 	#Operacion de equipos
 	 -Solicitar servicetag, fecha de ingreso
 	 -La fecha de expiracion se buscara en /dell/info/<id>
+	 -Dar de baja equipos
+
+	#Operaciones de consulta de datos
+	-Solicitar datos del equipo
+		-Basicos
+		-Garantia
+##Estructura de solicitud de solicitud y respuesta
+ #Registro de usuario
+	{
+	"nombre": "Daniel Alcaraz",
+	"num_empleado": "XXXXX"
+
+	} 
+##Respuesta de registro de usuario exitoso
+	{"numero de empleado":"Daniel Alcaraz"}
+##Mensaje de fallo
+	{
+	"code": 500,
+	"message":"error message"
+}
+##Estructura de solicitud de solicitud y respuesta
+ #Registro de equipo
+        {
+        "st": "xxxxxxxxxxxxx",
+        "fecha_ingreso": "2000-01-01"
+
+        }
+##Respuesta de registro de usuario exitoso
+        {"st":"XX-XX-XX-00"}
+##Mensaje de fallo
+        {
+        "code": 500,
+        "message":"error message"
+}
+
 
