@@ -49,22 +49,22 @@ Para el control del sistema de garantias, tendremos las siguientes entidades:
 
 ##Operaciones de Almacenamiento de datos 
 
-	#Operacion de Usuario
-	#Registrar usuario
-	  -Solicitar nombre y numero de empleado
-	  -El numero de empleado se asigna a todos los empleados
-	#Actualizacion de usuario
+	##Operacion de Usuario
+	##Registrar usuario
+	  - Solicitar nombre y numero de empleado
+	  - El numero de empleado se asigna a todos los empleados
+	##Actualizacion de usuario
 	  -Dar de baja usuarios
 	
-	#Operacion de equipos
-	 -Solicitar servicetag, fecha de ingreso
-	 -La fecha de expiracion se buscara en /dell/info/<id>
-	 -Dar de baja equipos
+	##Operacion de equipos
+	 - Solicitar servicetag, fecha de ingreso
+	 - La fecha de expiracion se buscara en /dell/info/<id>
+	 - Dar de baja equipos
 
-	#Operaciones de consulta de datos
-	-Solicitar datos del equipo
-		-Basicos
-		-Garantia
+##Operaciones de consulta de datos
+	- Solicitar datos del equipo
+		- Basicos
+		- Garantia
 ##Estructura de solicitud de solicitud y respuesta
  #Registro de usuario
 	{
@@ -83,15 +83,13 @@ Para el control del sistema de garantias, tendremos las siguientes entidades:
  #Registro de equipo
         {
         "st": "xxxxxxxxxxxxx",
-        "fecha_ingreso": "2000-01-01"
+        "fecha_ingreso": "2000-01-01"}
 
-        }
 ##Respuesta de registro de usuario exitoso
         {"st":"XX-XX-XX-00"}
 ##Mensaje de fallo
         {
         "code": 500,
-        "message":"error message"
-}
+        "message":"error message"}
 
 
