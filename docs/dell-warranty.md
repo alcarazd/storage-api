@@ -3,7 +3,8 @@
 Este proyecto almacena el numero de serie de los equipos de computo de la marca DELL, y consulta la existesia de su garantia
 dependiendo de las fechas de expiracion se mostraran los datos de los proximos equipos por realizar reemplazos.
 
-##Que es lo que quiero lograr:
+## Que es lo que quiero lograr:
+
 Este proyecto tiene como objetivo agilizar los reemplazos de equipos de computo de la marca DELL en una empresa X con el fin 
 de acelerar el proceso de cambio de equipos que se encuentra fuera de garantia y suponen un riesgo para la empresa X.
 
@@ -24,7 +25,8 @@ metodos de consultas sobre los equipos.
 | /dell/void            | En esta ruta se encuentran los numeros de serie de los equipos de los cuales su garantia ha expirado            |
 
 
-#Nota 
+# Nota
+ 
 Las rutas contaran con autenticacion de usuario de manera que solo los usuarios registrados podran ver y registrar los equipos
 
 
@@ -47,47 +49,59 @@ Para el control del sistema de garantias, tendremos las siguientes entidades:
 
 
 
-##Operaciones de Almacenamiento de datos 
+## Operaciones de Almacenamiento de datos 
 
-	##Operacion de Usuario
-	##Registrar usuario
+	## Operacion de Usuario
+
+	## Registrar usuario
+
 	  - Solicitar nombre y numero de empleado
 	  - El numero de empleado se asigna a todos los empleados
-	##Actualizacion de usuario
+	## Actualizacion de usuario
+
 	  -Dar de baja usuarios
 	
-	##Operacion de equipos
+	## Operacion de equipos
+
 	 - Solicitar servicetag, fecha de ingreso
 	 - La fecha de expiracion se buscara en /dell/info/<id>
 	 - Dar de baja equipos
 
-##Operaciones de consulta de datos
+# Operaciones de consulta de datos
+
 	- Solicitar datos del equipo
 		- Basicos
 		- Garantia
-##Estructura de solicitud de solicitud y respuesta
- #Registro de usuario
+# Estructura de solicitud de solicitud y respuesta
+
+# Registro de usuario 
+
 	{
 	"nombre": "Daniel Alcaraz",
 	"num_empleado": "XXXXX"
 
 	} 
-##Respuesta de registro de usuario exitoso
+# Respuesta de registro de usuario exitoso
+
 	{"numero de empleado":"Daniel Alcaraz"}
-##Mensaje de fallo
+## Mensaje de fallo
+
 	{
 	"code": 500,
 	"message":"error message"
 }
-##Estructura de solicitud de solicitud y respuesta
- #Registro de equipo
+## Estructura de solicitud de solicitud y respuesta
+
+# Registro de equipo
         {
         "st": "xxxxxxxxxxxxx",
         "fecha_ingreso": "2000-01-01"}
 
-##Respuesta de registro de usuario exitoso
+# Respuesta de registro de usuario exitoso
+
         {"st":"XX-XX-XX-00"}
-##Mensaje de fallo
+# Mensaje de fallo
+
         {
         "code": 500,
         "message":"error message"}
