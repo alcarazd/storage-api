@@ -3,12 +3,12 @@
 Este proyecto almacena el numero de serie de los equipos de computo de la marca DELL, y consulta la existesia de su garantia
 dependiendo de las fechas de expiracion se mostraran los datos de los proximos equipos por realizar reemplazos.
 
-## Que es lo que quiero lograr:
+# Que es lo que quiero lograr:
 
 Este proyecto tiene como objetivo agilizar los reemplazos de equipos de computo de la marca DELL en una empresa X con el fin 
 de acelerar el proceso de cambio de equipos que se encuentra fuera de garantia y suponen un riesgo para la empresa X.
 
-##El proyecto consiste en:
+# El proyecto consiste en:
 El pyoyecto consiste en que el encargado o los encargados de los movimientos de equipos ingresen los numeros de serie de los
 equipos de computo, para que estos sean consultados en el sitio web de DELL "Dell Warranty" y obtener las fechas de 
 expiracion para posteriormente desplegarlas en una pagina segun su proximidad a expirar para llevar un mejor orden y 
@@ -16,7 +16,7 @@ metodos de consultas sobre los equipos.
 
 
 
-## API
+# API
 
 | Path                  | Descripción |
 | --------------------- | ----------- |
@@ -49,7 +49,7 @@ Para el control del sistema de garantias, tendremos las siguientes entidades:
 
 
 
-## Operaciones de Almacenamiento de datos 
+# Operaciones de Almacenamiento de datos 
 
 	## Operacion de Usuario
 
@@ -75,21 +75,26 @@ Para el control del sistema de garantias, tendremos las siguientes entidades:
 # Estructura de solicitud de solicitud y respuesta
 
 # Registro de usuario 
-
+'''
 	{
 	"nombre": "Daniel Alcaraz",
 	"num_empleado": "XXXXX"
 
 	} 
+'''
+
 # Respuesta de registro de usuario exitoso
 
 	{"numero de empleado":"Daniel Alcaraz"}
-## Mensaje de fallo
+# Mensaje de fallo
+
+'''
 
 	{
 	"code": 500,
 	"message":"error message"
 }
+'''
 ## Estructura de solicitud de solicitud y respuesta
 
 # Registro de equipo
