@@ -75,26 +75,23 @@ Para el control del sistema de garantias, tendremos las siguientes entidades:
 # Estructura de solicitud de solicitud y respuesta
 
 # Registro de usuario 
-'''
+
 	{
 	"nombre": "Daniel Alcaraz",
 	"num_empleado": "XXXXX"
 
 	} 
-'''
+
 
 # Respuesta de registro de usuario exitoso
 
 	{"numero de empleado":"Daniel Alcaraz"}
 # Mensaje de fallo
 
-'''
-
 	{
 	"code": 500,
-	"message":"error message"
-}
-'''
+	"message":"error message"}
+
 ## Estructura de solicitud de solicitud y respuesta
 
 # Registro de equipo
