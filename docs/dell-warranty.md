@@ -109,4 +109,4 @@ Para el control del sistema de garantias, tendremos las siguientes entidades:
         "message":"error message"}
 
 # Implementacion de rutas para los recursos 
-_POST/USUARIO_
+**POST/USUARIO**
