@@ -121,6 +121,7 @@ Para el control del sistema de garantias, tendremos las siguientes entidades:
 **GET/EQUIPO**
  - 200 regresa una lista de equipos 
  - D.0.M regresa un mensaje de fallo de formato **json**
+
 **GET/EQUIPO/ST**
  - 200, datos de equipo con service tag
  - D.0.M, regresa un mensaje de fallo de formato **json**
