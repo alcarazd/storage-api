@@ -51,17 +51,17 @@ Para el control del sistema de garantias, tendremos las siguientes entidades:
 
 # Operaciones de Almacenamiento de datos 
 
-	## Operacion de Usuario
+	#Operacion de Usuario
 
-	## Registrar usuario
+	# Registrar usuario
 
 	  - Solicitar nombre y numero de empleado
 	  - El numero de empleado se asigna a todos los empleados
-	## Actualizacion de usuario
+	# Actualizacion de usuario
 
 	  -Dar de baja usuarios
 	
-	## Operacion de equipos
+	# Operacion de equipos
 
 	 - Solicitar servicetag, fecha de ingreso
 	 - La fecha de expiracion se buscara en /dell/info/<id>
@@ -74,7 +74,7 @@ Para el control del sistema de garantias, tendremos las siguientes entidades:
 		- Garantia
 # Estructura de solicitud de solicitud y respuesta
 
-# Registro de usuario 
+## Registro de usuario 
 
 	{
 	"nombre": "Daniel Alcaraz",
