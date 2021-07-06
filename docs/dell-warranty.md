@@ -14,7 +14,10 @@ equipos de computo, para que estos sean consultados en el sitio web de DELL "Del
 expiracion para posteriormente desplegarlas en una pagina segun su proximidad a expirar para llevar un mejor orden y 
 metodos de consultas sobre los equipos.
 
+# Sector 
 
+
+# Ejemplos de interacciones con el servidor
 
 # API
 
