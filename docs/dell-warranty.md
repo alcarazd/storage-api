@@ -14,7 +14,11 @@ equipos de computo, para que estos sean consultados en el sitio web de DELL "Del
 expiracion para posteriormente desplegarlas en una pagina segun su proximidad a expirar para llevar un mejor orden y 
 metodos de consultas sobre los equipos.
 
-# Sector 
+# Sector
+
+El proyecto sera implementado en el area de Tecnologias de la informacion de Medtronic el lago, en la cual por motivos de 
+seguridad y en conjunto con las garantias adquiridas de DELL deben de reemplazar los equipos en tiempo y forma para evitar problemas que puedan dener la operacion por parte de los equipos o amenzas externas que puedan aprovecharse de las vulne
+lidades de los equipos 
 
 
 # Ejemplos de interacciones con el servidor
