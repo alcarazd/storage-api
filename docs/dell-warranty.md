@@ -112,7 +112,7 @@ Para el control del sistema de este proyecto tendremos las siguietes entidades
  - 200 regresa una lista de usuarios
  - D.0.M regresa mensaje de falo de formato **json**
 
-> curl http://localhost:8080/dell-warranty/json -X GET -H "Content-Type: application/json" --data '{​​​​"usuarios">
+- curl http://localhost:8080/dell-warranty/json -X GET -H "Content-Type: application/json" --data '{​​​​"usuarios"}
 
 **POST/EQUIPO**
  - recibe una estructura de registro de equipo
@@ -120,7 +120,7 @@ Para el control del sistema de este proyecto tendremos las siguietes entidades
  - D.O.M regresa estructura de mensaje de fallo
 
     
-> curl http://localhost:8080/dell-warranty/json -X POST -H "Content-Type: application/json" --data '{​​​​​​​"st": "fecha_ingreso"}​​​​​​​'
+- curl http://localhost:8080/dell-warranty/json -X POST -H "Content-Type: application/json" --data '{​​​​​​​"st": "fecha_ingreso"}​​​​​​​'
 
 
 
@@ -128,13 +128,13 @@ Para el control del sistema de este proyecto tendremos las siguietes entidades
  - 200 regresa una lista de equipos
  - D.0.M regresa un mensaje de fallo de formato **json**
 
-> curl http://localhost:8080/dell-warranty/json -X GET -H "Content-Type: application/json" --data '{​​​​"equipos")>
+- curl http://localhost:8080/dell-warranty/json -X GET -H "Content-Type: application/json" --data '{​​​​"equipos")>
 
 **GET/EQUIPO/ST**
  - 200, datos de equipo con service tag
  - D.0.M, regresa un mensaje de fallo de formato **json**
 
-> curl http://localhost:8080/dell-warranty/json -X GET -H "Content-Type: application/json" --data '{​​​​"st")>
+- curl http://localhost:8080/dell-warranty/json -X GET -H "Content-Type: application/json" --data '{​​​​"st")>
 
 
 ## Verificacion y autentificacion de usuario
