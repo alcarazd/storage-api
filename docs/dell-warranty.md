@@ -5,7 +5,7 @@
 ## Que es lo que quiero lograr:
 
 Este proyecto tiene como objetivo agilizar los reemplazos de equipos de computo de la marca DELL en una empresa Medica con el fin
-de acelerar el proceso de cambio de equipos que se encuentra fuera de garantia y suponen un riesgo para la empresa X.
+de acelerar el proceso de cambio de equipos que se encuentra fuera de garantia y suponen un riesgo para la empresa Medica.
 
 ## El proyecto consiste en:
 El pyoyecto consiste en que el encargado o los encargados de los movimientos de equipos ingresen los numeros de serie de los
