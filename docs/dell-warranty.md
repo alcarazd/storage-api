@@ -158,7 +158,7 @@ los equipos que estan proximos a expirar para llevar acabo el reemplazo
 La actualizacion de la informacion de los equipos que se encuentran en la empresa, agregar los nuevos equipos, y dar
 de bajo los equipos que han salido
 
-# Documento de plan de implementacion (Aspecto Tecnico)
+## Documento de plan de implementacion (Aspecto Tecnico)
 
 ## Metodos de almacenamiento requeridos 
 
@@ -175,20 +175,9 @@ de bajo los equipos que han salido
 Este proyecto almacena el numero de serie de los equipos de computo de la marca DELL, y consulta la existesia de su garantia
 dependiendo de las fechas de expiracion se mostraran los datos de los proximos equipos por realizar reemplazos.
 
-# Que es lo que quiero lograr:
-
-Este proyecto tiene como objetivo agilizar los reemplazos de equipos de computo de la marca DELL en una empresa X con el fin 
-de acelerar el proceso de cambio de equipos que se encuentra fuera de garantia y suponen un riesgo para la empresa X.
-
-# El proyecto consiste en:
-El pyoyecto consiste en que el encargado o los encargados de los movimientos de equipos ingresen los numeros de serie de los
-equipos de computo, para que estos sean consultados en el sitio web de DELL "Dell Warranty" y obtener las fechas de 
-expiracion para posteriormente desplegarlas en una pagina segun su proximidad a expirar para llevar un mejor orden y 
-metodos de consultas sobre los equipos
 
 
-
-# Archivos Relacionados
+### Archivos Relacionados
 
  - `routes/dell-warranty.py`
 
