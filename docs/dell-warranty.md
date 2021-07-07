@@ -4,7 +4,7 @@
 
 ## Que es lo que quiero lograr:
 
-Este proyecto tiene como objetivo agilizar los reemplazos de equipos de computo de la marca DELL en una empresa X con el fin
+Este proyecto tiene como objetivo agilizar los reemplazos de equipos de computo de la marca DELL en una empresa Medica con el fin
 de acelerar el proceso de cambio de equipos que se encuentra fuera de garantia y suponen un riesgo para la empresa X.
 
 ## El proyecto consiste en:
@@ -18,9 +18,9 @@ metodos de consultas sobre los equipos
 
 Para el control del sistema de este proyecto tendremos las siguietes entidades
 
- 	- Usuario(Nombre,estatus,num_empleado)
+- Usuario(Nombre,estatus,num_empleado)
 
-       - Equipo(servicetag,fecha_ingreso,marca,fecha_expiracion)
+- Equipo(servicetag,fecha_ingreso,marca,fecha_expiracion)
 
 
 
@@ -28,30 +28,30 @@ Para el control del sistema de este proyecto tendremos las siguietes entidades
 
  Operaciones de Almacenamiento de datos
 
-        #Operacion de Usuario
+# Operacion de Usuario
 
-        # Registrar usuario
+### Registrar usuario
 
-          - Solicitar nombre y numero de empleado
-          - El numero de empleado se asigna a todos los empleados
-        # Actualizacion de usuario
+- Solicitar nombre y numero de empleado
+- El numero de empleado se asigna a todos los empleados
+### Actualizacion de usuario
 
-          -Dar de baja usuarios
+- Dar de baja usuarios
 
-        # Operacion de equipos
+### Operacion de equipos
 
-         - Solicitar servicetag, fecha de ingreso
-         - La fecha de expiracion se buscara en /dell/info/<id>
-         - Dar de baja equipos
+- Solicitar servicetag, fecha de ingreso
+- La fecha de expiracion se buscara en /dell/info/<id>
+- Dar de baja equipos
 
 
 ## Consultas de datos
 
- Operaciones de consulta de datos
+### Operaciones de consulta de datos
 
-        - Solicitar datos del equipo
-                - Basicos
-                - Garantia
+ - Solicitar datos del equipo
+ - Basicos
+ - Garantia
 
 ## Rutas HTTP
 
@@ -128,11 +128,16 @@ Para el control del sistema de este proyecto tendremos las siguietes entidades
 
 ## Verificacion y autentificacion de usuario
 
+Los usuarios estan autorizados a consultar informacion y dar de alta nuevos equipos.
+Sin embargo, no esta permitido que los eliminen.
+
+- Eliminar equipos de la base de datos. (app:dell:write:all)
+
 # Documento de plan de implementacion (Aspecto General)
 
 ## Motivacion y necesidad que llevaronn a la existencia de este proyecto?
 
-Este proyecto tiene como objetivo agilizar los reemplazos de equipos de computo de la marca DELL en una empresa X con el fin
+Este proyecto tiene como objetivo agilizar los reemplazos de equipos de computo de la marca DELL en una empresa Medica con el fin
 de acelerar el proceso de cambio de equipos que se encuentra fuera de garantia y suponen un riesgo para la empresa X.
 
 
@@ -160,17 +165,17 @@ de bajo los equipos que han salido
 
 ## Documento de plan de implementacion (Aspecto Tecnico)
 
-## Metodos de almacenamiento requeridos 
+## Metodos de almacenamiento requeridos: 
 
-## Plan para codificacion de los modulos 
+## Plan para codificacion de los modulos: 
 
-## Plan para la verificacion de la calidad del producto
+## Plan para la verificacion de la calidad del producto:
 
-## Plan para el despliegue del proyecto de codigo
+## Plan para el despliegue del proyecto de codigo:
 
-## Plan para realizar reportes de operacion y estatus del programa
+## Plan para realizar reportes de operacion y estatus del programa:
 
-# Requisito para las descripciones del aspecto tecnico
+# Requisito para las descripciones del aspecto tecnico:
 
 Este proyecto almacena el numero de serie de los equipos de computo de la marca DELL, y consulta la existesia de su garantia
 dependiendo de las fechas de expiracion se mostraran los datos de los proximos equipos por realizar reemplazos.
