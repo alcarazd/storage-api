@@ -112,18 +112,29 @@ Para el control del sistema de este proyecto tendremos las siguietes entidades
  - 200 regresa una lista de usuarios
  - D.0.M regresa mensaje de falo de formato **json**
 
+> curl http://localhost:8080/dell-warranty/json -X GET -H "Content-Type: application/json" --data '{​​​​"usuarios">
+
 **POST/EQUIPO**
  - recibe una estructura de registro de equipo
  - 201, registra equip, regresa estrutura de st para el nuevo equipo
  - D.O.M regresa estructura de mensaje de fallo
 
+    
+> curl http://localhost:8080/dell-warranty/json -X POST -H "Content-Type: application/json" --data '{​​​​​​​"st": "fecha_ingreso"}​​​​​​​'
+
+
+
 **GET/EQUIPO**
  - 200 regresa una lista de equipos
  - D.0.M regresa un mensaje de fallo de formato **json**
 
+> curl http://localhost:8080/dell-warranty/json -X GET -H "Content-Type: application/json" --data '{​​​​"equipos")>
+
 **GET/EQUIPO/ST**
  - 200, datos de equipo con service tag
  - D.0.M, regresa un mensaje de fallo de formato **json**
+
+> curl http://localhost:8080/dell-warranty/json -X GET -H "Content-Type: application/json" --data '{​​​​"st")>
 
 
 ## Verificacion y autentificacion de usuario
@@ -165,13 +176,31 @@ de bajo los equipos que han salido
 
 ## Documento de plan de implementacion (Aspecto Tecnico)
 
-## Metodos de almacenamiento requeridos: 
+## Modulos de codigo necesarios:
 
-## Plan para codificacion de los modulos: 
+- Modulos de rutas
+- Modulo de funciones 
+
+
+## Metodos de almacenamiento requeridos:
+
+- Sistema de archivos local 
+
+## Plan para codificacion de los modulos:
+
+- 1. Rutas
+- 2. Funciones
+ 
 
 ## Plan para la verificacion de la calidad del producto:
 
+Las pruebas se realizaran dando de alta los ST de los nuevos equipos por parte de los usuarios que tienen el permisos para
+agregar los equipos al proyecto ingresando los datos solicitados para que estos traten de ser eliminados por ellos y 
+demostrar que solo los usuarios autorizados tienen el privilegio para elilimar equipos del sistema.
+
 ## Plan para el despliegue del proyecto de codigo:
+
+Que pasos seguir para realizar el projecto 
 
 ## Plan para realizar reportes de operacion y estatus del programa:
 
