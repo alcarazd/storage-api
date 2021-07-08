@@ -24,7 +24,7 @@ else:
 app = bottle.Bottle()
 
 
-@app.get("/store")
+@app.get("dell/store")
 def store_record(*args, **kwargs):
     # data = bottle.request.json
     # filename = ""
@@ -32,12 +32,12 @@ def store_record(*args, **kwargs):
     return dict(code=200)
 
 
-@app.get("/info/<code>")
+@app.get("dell/info/<code>")
 def info_by_code(*args, code=None, **kwargs):
     pass
     return dict(code=200)
 
 
-@app.get("/void")
+@app.get("dell/void")
 def void_report(*args, **kwargs):
     return dict(code=200)
