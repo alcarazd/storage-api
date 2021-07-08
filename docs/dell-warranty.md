@@ -238,4 +238,5 @@ _114f2a27b96d35730c8d88ccc83c9654665e0c0f_
 
 - Crear en la carpeta de modulos funciones que emulen las interacciones con el almacen de archivos o datos
 
+_1860ea56b6a59f6d5242efc509ddbb7f0a4eee5f_
 - Crear un mock ups
