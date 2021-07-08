@@ -169,7 +169,7 @@ los equipos que estan proximos a expirar para llevar acabo el reemplazo
 - Base de datos
 - Pagina de DELL warranty
 
-## Que clase de trabajp operativo resulta de culminar y desplegar este proyecto?
+## Que clase de trabajo operativo resulta de culminar y desplegar este proyecto?
 
 La actualizacion de la informacion de los equipos que se encuentran en la empresa, agregar los nuevos equipos, y dar
 de bajo los equipos que han salido
@@ -196,7 +196,7 @@ de bajo los equipos que han salido
 
 Las pruebas se realizaran dando de alta los ST de los nuevos equipos por parte de los usuarios que tienen el permisos para
 agregar los equipos al proyecto ingresando los datos solicitados para que estos traten de ser eliminados por ellos y 
-demostrar que solo los usuarios autorizados tienen el privilegio para elilimar equipos del sistema.
+demostrar que solo los usuarios autorizados tienen el privilegio para eliminar equipos del sistema.
 
 ## Plan para el despliegue del proyecto de codigo:
 
