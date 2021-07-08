@@ -222,3 +222,15 @@ Prefijos de almacenamiento:
 Tablas de Base de Datos
 
 > Pendiente o Nulo
+
+- Crear un fork del proyecto storage-api
+
+_2855652bd49e4f4c5aa6fe9fee33327fe2186e4b_
+
+- Crear los archivos correspondientes a su proyecto y someterlos a control de versiones
+
+- Crear todas las rutas especificadas en su archivo de documentacion dentro de su archivo en la carpeta de routes, y todas deben responder 501, con _Content-Type:_  _application/son_
+
+- Crear en la carpeta de modulos funciones que emulen las interacciones con el almacen de archivos o datos
+
+- Crear un mock ups
