@@ -247,9 +247,12 @@ Tablas de Base de Datos
 
 
 
-- Crear todas las rutas especificadas en su archivo de documentacion dentro de su archivo en la carpeta de routes, y todas deben responder 501, con _Content-Type:_  _application/son_
-| Concepto                  | Commit Hash 
-| ---------------------    | ----------- |                               |
+- Crear todas las rutas especificadas en su archivo de documentacion dentro de su archivo en la carpeta de routes, y todas 
+deben responder 501, con _Content-Type:_  _application/son_
+
+
+| Concepto                  | Commit Hash |
+| ---------------------     | ----------- |                               
 | Creacion de rutas         | _9846a076b59af907a49faf90f8b1ab950bf369b5_ |
 
 
