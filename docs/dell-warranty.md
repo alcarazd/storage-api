@@ -178,8 +178,12 @@ de bajo los equipos que han salido
 
 ## Modulos de codigo necesarios:
 
-- Modulos de rutas
-- Modulo de funciones 
+- Modulos de rutas los cuales brindad una estructura a la negacion de las funcionalidades
+
+
+
+- Modulo de funciones, funciones de almacenamiento y utileria de la cual depende la funcionalidad del proyecto
+como es donde se guardara la informacion y las fechas en las que se basa. 
 
 
 ## Metodos de almacenamiento requeridos:
@@ -190,6 +194,9 @@ de bajo los equipos que han salido
 
 - 1. Rutas
 - 2. Funciones
+
+Se deben de crear primeramente los modulos/rutas para realizar pruebas de funcionamiento para ser tomado como base
+para la creacion de las funciones del programa para mantenerlo de una manera mas simple de utilizar.
  
 
 ## Plan para la verificacion de la calidad del producto:
@@ -225,18 +232,29 @@ Tablas de Base de Datos
 
 - Crear un fork del proyecto storage-api
 
-_2855652bd49e4f4c5aa6fe9fee33327fe2186e4b_
+| Concepto                  | Commit Hash |
+| Creacion de fork | _2855652bd49e4f4c5aa6fe9fee33327fe2186e4b_ |
+
+
 
 - Crear los archivos correspondientes a su proyecto y someterlos a control de versiones
 
-	- Rutas _9846a076b59af907a49faf90f8b1ab950bf369b5_
-	- Modulos _1860ea56b6a59f6d5242efc509ddbb7f0a4eee5f_
+| Conepto                  | Commit Hash |
+| --------------------- | ----------- |
+| Creacion de docs/dell-warranty                  | _1bec3e4077876caf065791fb5423306eadd121dd_ |
+| Creacion de modules/dell-warranty.py            | _1860ea56b6a59f6d5242efc509ddbb7f0a4eee5f_ |
+
+
 
 - Crear todas las rutas especificadas en su archivo de documentacion dentro de su archivo en la carpeta de routes, y todas deben responder 501, con _Content-Type:_  _application/son_
+| Concepto                  | Commit Hash |
+| Creacion de rutas | _9846a076b59af907a49faf90f8b1ab950bf369b5_ |
 
-_114f2a27b96d35730c8d88ccc83c9654665e0c0f_
 
 - Crear en la carpeta de modulos funciones que emulen las interacciones con el almacen de archivos o datos
 
-_1860ea56b6a59f6d5242efc509ddbb7f0a4eee5f_
+| Concepto                  | Commit Hash |
+| Creacion de funciones | _1860ea56b6a59f6d5242efc509ddbb7f0a4eee5f_ |
+
+
 - Crear un mock ups
