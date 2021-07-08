@@ -234,6 +234,8 @@ _2855652bd49e4f4c5aa6fe9fee33327fe2186e4b_
 
 - Crear todas las rutas especificadas en su archivo de documentacion dentro de su archivo en la carpeta de routes, y todas deben responder 501, con _Content-Type:_  _application/son_
 
+_1860ea56b6a59f6d5242efc509ddbb7f0a4eee5f_
+
 - Crear en la carpeta de modulos funciones que emulen las interacciones con el almacen de archivos o datos
 
 - Crear un mock ups
