@@ -26,18 +26,33 @@ app = bottle.Bottle()
 
 @app.get("dell/store")
 def store_record(*args, **kwargs):
+    bottle.response.status = 501
+    bottle.response.content_type = "application/json"
     # data = bottle.request.json
     # filename = ""
     # store_string("dell", filename, json_dumps(data))
-    return dict(code=200)
+    return dict(code=501, message = "Not Implemented")
 
 
 @app.get("dell/info/<code>")
 def info_by_code(*args, code=None, **kwargs):
+ bottle.response.status = 501
+    bottle.response.content_type = "application/json"
+    # data = bottle.request.json
+    # filename = ""
+    # store_string("dell", filename, json_dumps(data))
     pass
-    return dict(code=200)
+    return dict(code=501, message = "Not Implemented")
+    
 
 
 @app.get("dell/void")
 def void_report(*args, **kwargs):
-    return dict(code=200)
+
+bottle.response.status = 501
+    bottle.response.content_type = "application/json"
+    # data = bottle.request.json
+    # filename = ""
+    # store_string("dell", filename, json_dumps(data))
+    return dict(code=501, message = "Not Implemented")
+
