@@ -233,6 +233,7 @@ Tablas de Base de Datos
 - Crear un fork del proyecto storage-api
 
 | Concepto                  | Commit Hash                                |
+| ---------------------    | ----------- |
 | Creacion de fork          | _2855652bd49e4f4c5aa6fe9fee33327fe2186e4b_ |
 
 
@@ -247,13 +248,15 @@ Tablas de Base de Datos
 
 
 - Crear todas las rutas especificadas en su archivo de documentacion dentro de su archivo en la carpeta de routes, y todas deben responder 501, con _Content-Type:_  _application/son_
-| Concepto                  | Commit Hash                                |
+| Concepto                  | Commit Hash 
+| ---------------------    | ----------- |                               |
 | Creacion de rutas         | _9846a076b59af907a49faf90f8b1ab950bf369b5_ |
 
 
 - Crear en la carpeta de modulos funciones que emulen las interacciones con el almacen de archivos o datos
 
 | Concepto                  | Commit Hash                                |
+| ---------------------    | ----------- |
 | Creacion de funciones     | _1860ea56b6a59f6d5242efc509ddbb7f0a4eee5f_ |
 
 
