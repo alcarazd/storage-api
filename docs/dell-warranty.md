@@ -269,7 +269,7 @@ La imagen de **docs/assets/dell-warranty-0001-login_page.png** muestra un formul
 en el cual se solicitan los datos del usuario, nombre de usuario **username** y la contraseña **password**, al llenar
 los campos se debe de presionar el boton de **login** para ingresar.
 
-![texto](docs/assets/dell-warranty-0001-login_page.png)
+![texto](docs/assets/dell-warranty-0001-login_page.png){width= '100px'}
 
 La imagen de **docs/assets/dell-warranty-0002-add_page.png** muestra un formulario con el cual los usuarios pueden
 dar de alta los nuevos equipos adquridos. Se solicita el service tag del equipo o **(ST)** junto con la fecha de 
