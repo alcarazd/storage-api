@@ -265,6 +265,23 @@ deben responder 501, con _Content-Type:_  _application/son_
 
 - Crear un mock ups
 
+La imagen de **docs/assets/dell-warranty-0001-login_page.png** muestra un formulario de ingreso a la aplicacion 
+en el cual se solicitan los datos del usuario, nombre de usuario **username** y la contraseña **password**, al llenar
+los campos se debe de presionar el boton de **login** para ingresar.
+
+La imagen de **docs/assets/dell-warranty-0002-add_page.png** muestra un formulario con el cual los usuarios pueden
+dar de alta los nuevos equipos adquridos. Se solicita el service tag del equipo o **(ST)** junto con la fecha de 
+ingreso del mismo al llenar esos campos se debe de dar clic sobre el boton de *agregar* para añadir el equipo.
+
+La imagen de **docs/assets/dell-warranty-0003-delete-page.png** muestra un formulario para eliminar equipos
+solicitando el service tag del equipo a eliminar, para poder llevar esta accion acabo se debe de marcar la casilla
+para confirmar antes de dar clic sobre el boton **eliminar**.
+
+__NOTA__ Se debe contar con autorizacion para eliminar equipos.
+
+La imagen de **docs/assets/dell-warranty-0004_info_page.png** muestra una ventana en la cual los equipos
+proximos a expirar apareceran, para que el personal comience con la logistica del reemplazo.
+
 | Concepto                  | Commit Hash                                |
 | ---------------------    | ----------- |
 | Creacion de mock-ups     | _b2f11a0798261fd3028dd8bee329dd39a6492628_ |
