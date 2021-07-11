@@ -285,5 +285,5 @@ proximos a expirar apareceran, para que el personal comience con la logistica de
 | Concepto                  | Commit Hash                                |
 | ---------------------    | ----------- |
 | Creacion de mock-ups     | _b2f11a0798261fd3028dd8bee329dd39a6492628_ |
-| Explicacion de mock-ups     | _1860ea56b6a59f6d5242efc509ddbb7f0a4eee5f_ |
+| Explicacion de mock-ups     | _b16301b72edddf892f423d443e9d09072a58417f_ |
 
