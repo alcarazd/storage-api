@@ -294,7 +294,7 @@ La imagen de **docs/assets/dell-warranty-0004_info_page.png** muestra una ventan
 proximos a expirar apareceran, para que el personal comience con la logistica del reemplazo.
 
 
-![Info](https://github.com/alcarazd/storage-api/blob/master/docs/assets/dell-warranty-0001_login_page.png)
+![Info](https://github.com/alcarazd/storage-api/blob/master/docs/assets/dell-warranty-0004_info_page.png)
 
 | Concepto                  | Commit Hash                                |
 | ---------------------    | ----------- |
