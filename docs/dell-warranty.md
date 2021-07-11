@@ -279,14 +279,22 @@ La imagen de **docs/assets/dell-warranty-0002-add_page.png** muestra un formular
 dar de alta los nuevos equipos adquridos. Se solicita el service tag del equipo o **(ST)** junto con la fecha de 
 ingreso del mismo al llenar esos campos se debe de dar clic sobre el boton de **agregar** para añadir el equipo.
 
+![Add](https://github.com/alcarazd/storage-api/blob/master/docs/assets/dell-warranty-0002-add_page.png)
+
 La imagen de **docs/assets/dell-warranty-0003-delete-page.png** muestra un formulario para eliminar equipos
 solicitando el service tag del equipo a eliminar, para poder llevar esta accion acabo se debe de marcar la casilla
 para confirmar antes de dar clic sobre el boton **eliminar**.
+
+
+![Delete](https://github.com/alcarazd/storage-api/blob/master/docs/assets/dell-warranty-0003-delete-page.png)
 
 __NOTA__ Se debe contar con autorizacion para eliminar equipos.
 
 La imagen de **docs/assets/dell-warranty-0004_info_page.png** muestra una ventana en la cual los equipos
 proximos a expirar apareceran, para que el personal comience con la logistica del reemplazo.
+
+
+![Info](https://github.com/alcarazd/storage-api/blob/master/docs/assets/dell-warranty-0001_login_page.png)
 
 | Concepto                  | Commit Hash                                |
 | ---------------------    | ----------- |
