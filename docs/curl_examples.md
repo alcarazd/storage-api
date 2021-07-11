@@ -52,3 +52,4 @@ curl -vq http://localhost:8080/storage/json \
     -H 'Content-Type: application/json' \
     --data @./foo.json
 ```
+
