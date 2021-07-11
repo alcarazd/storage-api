@@ -269,9 +269,9 @@ La imagen de **docs/assets/dell-warranty-0001-login_page.png** muestra un formul
 en el cual se solicitan los datos del usuario, nombre de usuario **username** y la contraseña **password**, al llenar
 los campos se debe de presionar el boton de **login** para ingresar.
 
-![texto](C:\Users\Daniel\storage-api\docs\assets\dell-warranty-0001-login_page.png){width= '100px'}
 
-![](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png){width='100px'}
+
+![](https://github.com/docs/assets/dell-warranty-0001-login_page.png)
 
 
 La imagen de **docs/assets/dell-warranty-0002-add_page.png** muestra un formulario con el cual los usuarios pueden
