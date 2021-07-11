@@ -271,7 +271,8 @@ los campos se debe de presionar el boton de **login** para ingresar.
 
 
 
-![texto](https://github.com/alcarazd/storage-api/tree/master/docs/assets/dell-warranty-0001-login_page.png)
+![Login](https://github.com/alcarazd/storage-api/blob/master/docs/assets/dell-warranty-0001-login_page.png)
+
 
 
 La imagen de **docs/assets/dell-warranty-0002-add_page.png** muestra un formulario con el cual los usuarios pueden
