@@ -271,6 +271,9 @@ los campos se debe de presionar el boton de **login** para ingresar.
 
 ![texto](C:\Users\Daniel\storage-api\docs\assets\dell-warranty-0001-login_page.png){width= '100px'}
 
+![](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png){width='100px'}
+
+
 La imagen de **docs/assets/dell-warranty-0002-add_page.png** muestra un formulario con el cual los usuarios pueden
 dar de alta los nuevos equipos adquridos. Se solicita el service tag del equipo o **(ST)** junto con la fecha de 
 ingreso del mismo al llenar esos campos se debe de dar clic sobre el boton de **agregar** para añadir el equipo.
