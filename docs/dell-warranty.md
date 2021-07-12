@@ -165,9 +165,9 @@ acabo y que con los recursos que cuenta la empresa se puede automatizar.
 
 ## Quienes son los afectados por este problema que soluciono el proyecto
 
-Los efectados por la solucion de este proyecto son el departamento de TI quienes podran mejorar su proseso de reemplazo de equipos
+Los efectados por la solucion de este proyecto son el departamento de TI quienes podran mejorar su proceso de reemplazo de equipos
 y todo el personal que utiliza estos equipos dado que tendran equipos actualizados y con menores problemas de hardware gracias
-a contar con la garantia
+a contar con la garantia.
 
 ## Cual es la solucion especifica que plantea este proyecto?
 
