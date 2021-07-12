@@ -112,13 +112,13 @@ A continuacion, se presentan las rutas HTTP con su descipcion.
 
 **GET/USUARIO**
  - 200 regresa una lista de usuarios
- - D.0.M regresa mensaje de falo de formato **json**
+ - D.0.M regresa mensaje de fallo de formato **json**
 
 - curl http://localhost:8080/dell-warranty/json -X GET -H "Content-Type: application/json" --data '{​​​​"usuarios"}'
 
 **POST/EQUIPO**
  - recibe una estructura de registro de equipo
- - 201, registra equip, regresa estrutura de st para el nuevo equipo
+ - 201, registra equipo, regresa estrutura de st para el nuevo equipo
  - D.O.M regresa estructura de mensaje de fallo
 
  
