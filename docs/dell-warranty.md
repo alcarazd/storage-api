@@ -1,39 +1,42 @@
-# Dell Waranty Query and Store
+# Descripcion general del proyecto
 
-## Mercado/Sector
+El presente proyecto consiste en un sistema de registro de equipos DELL el cual los almacena. La finalidad es que el personal de 
+la empresa registre los nuevos equipos adquiridos para que posteriormente cuando esten por vencer sus garantias, puedan agilizar
+los planes de reemplazo de una manera mas optima que la actual, dado que el sistema plantea brindarles toda la informacion 
+necesaria contenida en los service tag(ST) de los equipos.
 
-## Que es lo que quiero lograr:
+### Mercado/Sector
 
-Este proyecto tiene como objetivo agilizar los reemplazos de equipos de computo de la marca DELL en una empresa Medica con el fin
-de acelerar el proceso de cambio de equipos que se encuentra fuera de garantia y suponen un riesgo para la empresa Medica.
+Este proyecto esta pensado para las empresas del sector medico que adquieren dispositivos de la marca DELL al mismo tiempo 
+que adquieren licencias para dichos equipos, para las empresas del sector es de suma importancia el manejo de su informacion y
+la continuidad del negocio por lo cual es importante para ellas mantener sus equipos actualizados tanto en software como
+en hardware. 
 
-## El proyecto consiste en:
-El pyoyecto consiste en que el encargado o los encargados de los movimientos de equipos ingresen los numeros de serie de los
-equipos de computo, para que estos sean consultados en el sitio web de DELL "Dell Warranty" y obtener las fechas de
-expiracion para posteriormente desplegarlas en una pagina segun su proximidad a expirar para llevar un mejor orden y
-metodos de consultas sobre los equipos
- 
 
 ## Modelado de datos
 
-Para el control del sistema de este proyecto tendremos las siguietes entidades
+En el modelado de datos la estructura es una parte fundamental y debe de realizarse previo al inicio del proyecto, para el
+funcionamiento adecuado y posibles cambios o el desarrollo del mismo. El proyecto presentara las siguientes entidades: 
 
-- Usuario(Nombre,estatus,num_empleado)
+- Usuario(Nombre, estatus, num_empleado)
 
-- Equipo(servicetag,fecha_ingreso,marca,fecha_expiracion)
+- Equipo(servicetag, fecha_ingreso, marca, fecha_expiracion)
 
 
 
 ## Interacciones de datos y operaciones de datos
 
- Operaciones de Almacenamiento de datos
+ Las interacciones de datos se refiere a la manera en la que funciona el proyecto. Algunas intereacciones de este proyecto
+son las siguientes:
 
-# Operacion de Usuario
 
-### Registrar usuario
+### Operacion de Usuario
 
-- Solicitar nombre y numero de empleado
-- El numero de empleado se asigna a todos los empleados
+- Registrar usuario
+
+	- Solicitar nombre y numero de empleado
+	- El numero de empleado se asigna a todos los empleados
+
 ### Actualizacion de usuario
 
 - Dar de baja usuarios
@@ -47,16 +50,22 @@ Para el control del sistema de este proyecto tendremos las siguietes entidades
 
 ## Consultas de datos
 
-### Operaciones de consulta de datos
+Las consultas de datos sirven para obtener informacion especifica sobre los datos ya almacenados. A continuacion algunas
+de las posibles consultas de este proyecto
+
 
  - Solicitar datos del equipo
- - Basicos
+	- Por ST
+ - Lista de equipos
+	- Todos
+	- ST
  - Garantia
+	- Todos 
+	- ST
 
 ## Rutas HTTP
 
-
-# API
+A continuacion, se presentan las rutas HTTP con su descipcion.
 
 | Path                  | Descripción |
 | --------------------- | ----------- |
@@ -66,11 +75,10 @@ Para el control del sistema de este proyecto tendremos las siguietes entidades
 
 
 
-## Ejemplos de mensajes HTTP
+## Ejemplos de mensajes HTTP que aceptara y emitira el servidor
 
-## Estructura de solicitud de solicitud y respuesta
 
-## Registro de usuario
+### Registro de usuario
 
         {
         "nombre": "Daniel Alcaraz",
@@ -79,35 +87,29 @@ Para el control del sistema de este proyecto tendremos las siguietes entidades
         }
 
 
-## Respuesta de registro de usuario exitoso
+- Respuesta de registro de usuario exitoso
 
         {"numero de empleado":"Daniel Alcaraz"}
-## Mensaje de fallo
 
-        {
-        "code": 500,
-        "message":"error message"}
+- Mensaje de fallo
 
-## Estructura de solicitud de solicitud y respuesta
+        { "code": 500, "message":"error message"}
 
-# Registro de equipo
-        {
-        "st": "xxxxxxxxxxxxx",
-        "fecha_ingreso": "2000-01-01"}
 
-# Respuesta de registro de usuario exitoso
+### Registro de equipo
+        {"st": "xxxxxxxxxxxxx", "fecha_ingreso": "2000-01-01"}
+
+- Respuesta de registro de usuario exitoso
 
         {"st":"XX-XX-XX-00"}
-# Mensaje de fallo
 
-        {
-        "code": 500,
-        "message":"error message"}
+- Mensaje de fallo
+
+        {"code": 500, "message":"error message"}
 
 
-## Ejemplo de interacciones con el servidor
+## Ejemplo de interacciones con el servidor e Implementacion de rutas para los recursos
 
-## Implementacion de rutas para los recursos
 **GET/USUARIO**
  - 200 regresa una lista de usuarios
  - D.0.M regresa mensaje de falo de formato **json**
@@ -119,9 +121,8 @@ Para el control del sistema de este proyecto tendremos las siguietes entidades
  - 201, registra equip, regresa estrutura de st para el nuevo equipo
  - D.O.M regresa estructura de mensaje de fallo
 
-    
+ 
 - curl http://localhost:8080/dell-warranty/json -X POST -H "Content-Type: application/json" --data '{​​​​​​​"st": "fecha_ingreso"}​​​​​​​'
-
 
 
 **GET/EQUIPO**
@@ -142,14 +143,24 @@ Para el control del sistema de este proyecto tendremos las siguietes entidades
 Los usuarios estan autorizados a consultar informacion y dar de alta nuevos equipos.
 Sin embargo, no esta permitido que los eliminen.
 
-- Eliminar equipos de la base de datos. (app:dell:write:all)
+- Eliminar equipos de la base de datos. (`app:dell:write:all`)
 
-# Documento de plan de implementacion (Aspecto General)
+
+# Documento de plan de implementacion 
+
+## Aspecto General
+
+Este proyecto esta pensado para ayudar al manejo y control interno de los equipos, con la interaccion de la tecnologia y
+automatizacion.
+
+Este proyecto se encuentra en desarrollo ya que la empresa cuenta con un sistema con funciones parecidas pero que satisface
+otras necesidades.
 
 ## Motivacion y necesidad que llevaronn a la existencia de este proyecto?
 
-Este proyecto tiene como objetivo agilizar los reemplazos de equipos de computo de la marca DELL en una empresa Medica con el fin
-de acelerar el proceso de cambio de equipos que se encuentra fuera de garantia y suponen un riesgo para la empresa X.
+Lo que me motivo a realizar este proyecto fue la experiencia al realizar la actividad de reemplazos de equipo de la forma
+actual, bastante complicada al tener que recabar informacion en distintos sitios y el tiempo que transcurre para llevarlo 
+acabo y que con los recursos que cuenta la empresa se puede automatizar.
 
 
 ## Quienes son los afectados por este problema que soluciono el proyecto
@@ -161,7 +172,7 @@ a contar con la garantia
 ## Cual es la solucion especifica que plantea este proyecto?
 
 Almacenar la informacion basica de todos los equipos que entren a la empresa y que se ordenen de manera que muestren 
-los equipos que estan proximos a expirar para llevar acabo el reemplazo
+los equipos que estan proximos a expirar para llevar acabo el reemplazo.
 
 ## Que recursos se necesitan para iniciar el trabajo sobre este proyecto?
 
@@ -174,12 +185,11 @@ los equipos que estan proximos a expirar para llevar acabo el reemplazo
 La actualizacion de la informacion de los equipos que se encuentran en la empresa, agregar los nuevos equipos, y dar
 de bajo los equipos que han salido
 
-## Documento de plan de implementacion (Aspecto Tecnico)
+## Aspecto Tecnico
 
-## Modulos de codigo necesarios:
+### Modulos de codigo necesarios:
 
 - Modulos de rutas los cuales brindad una estructura a la negacion de las funcionalidades
-
 
 
 - Modulo de funciones, funciones de almacenamiento y utileria de la cual depende la funcionalidad del proyecto
@@ -205,17 +215,15 @@ Las pruebas se realizaran dando de alta los ST de los nuevos equipos por parte d
 agregar los equipos al proyecto ingresando los datos solicitados para que estos traten de ser eliminados por ellos y 
 demostrar que solo los usuarios autorizados tienen el privilegio para eliminar equipos del sistema.
 
-## Plan para el despliegue del proyecto de codigo:
+> ## Plan para el despliegue del proyecto de codigo:
+ 
 
-Que pasos seguir para realizar el projecto 
+> ## Plan para realizar reportes de operacion y estatus del programa:
 
-## Plan para realizar reportes de operacion y estatus del programa:
-
-# Requisito para las descripciones del aspecto tecnico:
+# Evaluacion - Computo en la nube:
 
 Este proyecto almacena el numero de serie de los equipos de computo de la marca DELL, y consulta la existesia de su garantia
 dependiendo de las fechas de expiracion se mostraran los datos de los proximos equipos por realizar reemplazos.
-
 
 
 ### Archivos Relacionados
@@ -230,7 +238,7 @@ Tablas de Base de Datos
 
 > Pendiente o Nulo
 
-- Crear un fork del proyecto storage-api
+- 1.  Crear un fork del proyecto storage-api _Señalar cual es el commit-hash a partir de haber realizado el fork_.
 
 | Concepto                  | Commit Hash                                |
 | ---------------------    | ----------- |
@@ -238,7 +246,8 @@ Tablas de Base de Datos
 
 
 
-- Crear los archivos correspondientes a su proyecto y someterlos a control de versiones
+- 2. Crear los archivos correspondientes a su proyecto, y someterlos a control de versiones. _Señalar el commit hash que contiene_
+_la creacion de dichos archivos_
 
 | Conepto                  | Commit Hash |
 | ---------------------    | ----------- |
@@ -247,8 +256,8 @@ Tablas de Base de Datos
 
 
 
-- Crear todas las rutas especificadas en su archivo de documentacion dentro de su archivo en la carpeta de routes, y todas 
-deben responder 501, con _Content-Type:_  _application/son_
+- 3. Crear todas las rutas especificadas en su archivo de documentacion dentro de su archivo en la carpeta de routes, y todas 
+deben responder 501, con _Content-Type:_  _application/son_.
 
 
 | Concepto                  | Commit Hash |
@@ -256,14 +265,14 @@ deben responder 501, con _Content-Type:_  _application/son_
 | Creacion de rutas         | _9846a076b59af907a49faf90f8b1ab950bf369b5_ |
 
 
-- Crear en la carpeta de modulos funciones que emulen las interacciones con el almacen de archivos o datos
+- 4. Crear en la carpeta de modulos funciones que emulen las interacciones con el almacen de archivos o datos.
 
 | Concepto                  | Commit Hash                                |
 | ---------------------    | ----------- |
 | Creacion de funciones     | _1860ea56b6a59f6d5242efc509ddbb7f0a4eee5f_ |
 
 
-- Crear un mock ups
+- 5. Crear un mock ups.
 
 La imagen de **docs/assets/dell-warranty-0001-login_page.png** muestra un formulario de ingreso a la aplicacion 
 en el cual se solicitan los datos del usuario, nombre de usuario **username** y la contraseña **password**, al llenar
