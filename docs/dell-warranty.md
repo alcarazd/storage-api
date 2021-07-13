@@ -125,7 +125,7 @@ A continuacion, se presentan las rutas HTTP con su descipcion.
  - 200 regresa una lista de equipos
  - D.0.M regresa un mensaje de fallo de formato **json**
 
-- curl http://localhost:8080/dell-warranty/dell/info
+- curl http://localhost:8080/dell-warranty/dell/info/list
 
 **GET/EQUIPO/ST**
  - 200, datos de equipo con service tag
