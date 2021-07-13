@@ -71,7 +71,7 @@ A continuacion, se presentan las rutas HTTP con su descipcion.
 | --------------------- | ----------- |
 | /dell/store           | En esta ruta se almacenan los numeros de serie de los equipos ingresados por los usuarios                       |
 | /dell/info/<id>       | En esta ruta se encuentra la informacion por ID de los equipos en propiedad                                     |
-| /dell/info/         | En esta ruta se encuentra la informacion de todos los equipos en propiedad                                      |
+| /dell/info/list         | En esta ruta se encuentra la informacion de todos los equipos en propiedad                                      |
 | /dell/void            | En esta ruta se encuentran los numeros de serie de los equipos de los cuales su garantia ha expirado            |
 
 
