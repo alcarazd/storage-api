@@ -44,7 +44,7 @@ def info_by_code(*args, code=None, **kwargs):
     pass
     return dict(code=501, message = "Not Implemented")
 
-@app.get("dell/info/")
+@app.get("dell/info/list")
 def info_by_code(*args, code=None, **kwargs):
  bottle.response.status = 501
     bottle.response.content_type = "application/json"
