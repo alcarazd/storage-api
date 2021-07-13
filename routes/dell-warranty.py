@@ -43,7 +43,16 @@ def info_by_code(*args, code=None, **kwargs):
     # store_string("dell", filename, json_dumps(data))
     pass
     return dict(code=501, message = "Not Implemented")
-    
+
+@app.get("dell/info/")
+def info_by_code(*args, code=None, **kwargs):
+ bottle.response.status = 501
+    bottle.response.content_type = "application/json"
+    # data = bottle.request.json
+    # filename = ""
+    # store_string("dell", filename, json_dumps(data))
+    pass
+    return dict(code=501, message = "Not Implemented")
 
 
 @app.get("dell/void")
