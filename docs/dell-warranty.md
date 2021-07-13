@@ -71,6 +71,7 @@ A continuacion, se presentan las rutas HTTP con su descipcion.
 | --------------------- | ----------- |
 | /dell/store           | En esta ruta se almacenan los numeros de serie de los equipos ingresados por los usuarios                       |
 | /dell/info/<id>       | En esta ruta se encuentra la informacion por ID de los equipos en propiedad                                     |
+| /dell/info/         | En esta ruta se encuentra la informacion de todos los equipos en propiedad                                      |
 | /dell/void            | En esta ruta se encuentran los numeros de serie de los equipos de los cuales su garantia ha expirado            |
 
 
@@ -110,11 +111,6 @@ A continuacion, se presentan las rutas HTTP con su descipcion.
 
 ## Ejemplo de interacciones con el servidor e Implementacion de rutas para los recursos
 
-**GET/USUARIO**
- - 200 regresa una lista de usuarios
- - D.0.M regresa mensaje de fallo de formato **json**
-
-- curl http://localhost:8080/dell-warranty/json -X GET -H "Content-Type: application/json" --data '{​​​​"usuarios"}'
 
 **POST/EQUIPO**
  - recibe una estructura de registro de equipo
@@ -122,20 +118,20 @@ A continuacion, se presentan las rutas HTTP con su descipcion.
  - D.O.M regresa estructura de mensaje de fallo
 
  
-- curl http://localhost:8080/dell-warranty/json -X POST -H "Content-Type: application/json" --data '{​​​​​​​"st": "fecha_ingreso"}​​​​​​​'
+- curl http://localhost:8080/dell-warranty/dell/store -X POST -H "Content-Type: application/json" --data '{​​​​​​​"st": "fecha_ingreso"}​​​​​​​'
 
 
 **GET/EQUIPO**
  - 200 regresa una lista de equipos
  - D.0.M regresa un mensaje de fallo de formato **json**
 
-- curl http://localhost:8080/dell-warranty/json -X GET -H "Content-Type: application/json" --data '{​​​​"equipos")'
+- curl http://localhost:8080/dell-warranty/dell/info
 
 **GET/EQUIPO/ST**
  - 200, datos de equipo con service tag
  - D.0.M, regresa un mensaje de fallo de formato **json**
 
-- curl http://localhost:8080/dell-warranty/json -X GET -H "Content-Type: application/json" --data '{​​​​"st")'
+- curl http://localhost:8080/dell-warranty/dell/info<id>
 
 
 ## Verificacion y autentificacion de usuario
@@ -144,6 +140,8 @@ Los usuarios estan autorizados a consultar informacion y dar de alta nuevos equi
 Sin embargo, no esta permitido que los eliminen.
 
 - Eliminar equipos de la base de datos. (`app:dell:write:all`)
+- Permiso para ver (`app:dell:read:only`)
+
 
 
 # Documento de plan de implementacion 
@@ -300,7 +298,7 @@ para confirmar antes de dar clic sobre el boton **eliminar**.
 __NOTA__ Se debe contar con autorizacion para eliminar equipos.
 
 La imagen de **docs/assets/dell-warranty-0004_info_page.png** muestra una ventana en la cual los equipos
-proximos a expirar apareceran, para que el personal comience con la logistica del reemplazo.
+proximos a expirar apareceran, para que el personal comience con la logistica del reemplazo (mostrando el service tag).
 
 
 ![Info](https://github.com/alcarazd/storage-api/blob/master/docs/assets/dell-warranty-0004_info_page.png)
