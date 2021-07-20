@@ -12,11 +12,21 @@ import bottle
 import routes.auth
 import routes.storage
 import models.base
+import routes.dell-warranty
 
 app = bottle.Bottle()
 
 app.mount("/auth", routes.auth.app)
 app.mount("/storage", routes.storage.app)
+app.mount("/dell/store, routes.dell/store.app")
+app.mount("/dell/info, routes.dell/info.app")
+app.mount("/dell/store/<code>, routes.dell/store.app")
+app.mount("/dell/info/list, routes.dell/info/list.app")
+app.mount("/dell/void, routes.dell/void.app")
+
+
+
+
 
 
 @app.get("/")
