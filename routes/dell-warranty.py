@@ -1,5 +1,6 @@
 from json import dumps as json_dumps
 import bottle
+from modules.bottles import BottleJson
 
 app = BottleJson()
 
@@ -40,6 +41,8 @@ def store_record(*args, **kwargs):
 
 @app.get("dell/info/<code>")
 def info_by_code(*args, code=None, **kwargs):
+ payload = bottle.request.json
+    print(payload)
  bottle.response.status = 501
     bottle.response.content_type = "application/json"
     # data = bottle.request.json
@@ -50,6 +53,8 @@ def info_by_code(*args, code=None, **kwargs):
 
 @app.get("dell/info/list")
 def info_by_code(*args, code=None, **kwargs):
+ payload = bottle.request.json
+    print(payload)
  bottle.response.status = 501
     bottle.response.content_type = "application/json"
     # data = bottle.request.json
@@ -61,6 +66,8 @@ def info_by_code(*args, code=None, **kwargs):
 
 @app.get("dell/void")
 def void_report(*args, **kwargs):
+ payload = bottle.request.json
+    print(payload)
 
 bottle.response.status = 501
     bottle.response.content_type = "application/json"
