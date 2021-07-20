@@ -1,6 +1,8 @@
 from json import dumps as json_dumps
 import bottle
 
+app = BottleJson()
+
 STORAGE_METHOD = environ["STORAGE_METHOD"]
 if STORAGE_METHOD == 'LOCAL':
     print("Using local storage")
@@ -26,6 +28,8 @@ app = bottle.Bottle()
 
 @app.get("dell/store")
 def store_record(*args, **kwargs):
+    payload = bottle.request.json
+    print(payload)
     bottle.response.status = 501
     bottle.response.content_type = "application/json"
     # data = bottle.request.json
