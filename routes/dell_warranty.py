@@ -18,10 +18,17 @@ def index():
 
 
 @app.get("/store")
-def index():
+def store(*args, **kwargs):
     payload = bottle.request.query
     print(bottle.request.query)
     print(payload.dict)
+    try:
+	service_tag = str(payload['service_tag'])
+	fecha = str(payload{'fecha'})
+	if len(service_tag) == 0 | =< 6:
+		raise Exception()
+    
+
     raise bottle.HTTPError(501, "Error")
     
     #bottle.response.content_type = "application/json"
