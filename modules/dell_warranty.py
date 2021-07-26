@@ -1,4 +1,14 @@
 from datetime import datetime
+from modules.dell_warranty import payload
+
+
+
+@app.get("/store")
+def alamacenar_dato(service_tag = None):
+	print("Desde Modulo")
+	print(service_tag)
+	return("Exito")
+
 
 
 def get_timestamp():
