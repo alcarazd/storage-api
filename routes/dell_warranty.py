@@ -19,18 +19,23 @@ def index():
 
 @app.get("/store")
 def store(*args, **kwargs):
-    payload = bottle.request.query
-    print(bottle.request.query)
-    print(payload.dict)
+
+	payload = bottle.request.query
+    	print(bottle.request.query)
+    	print(payload.dict)
     try:
 	service_tag = str(payload['service_tag'])
 	fecha = str(payload{'fecha'})
 	if len(service_tag) == 0 | =< 6:
-		raise Exception()
-    
-
+	raise Exception()
+	fecha = str(payload(['fecha'])
+        year, month, date = [int(x) for x in fecha.split("-")]
+        print("Datos validos")
+    except:
+        print("Datos invalidos")
+	raise HTTPError(400)
     raise bottle.HTTPError(501, "Error")
-    
+
     #bottle.response.content_type = "application/json"
     # data = bottle.request.json
     # filename = ""
@@ -40,8 +45,17 @@ def store(*args, **kwargs):
 
 @app.get("dell/info/<code>")
 def info_by_code(*args, code=None, **kwargs):
-     payload = bottle.request.json
-     print(payload)
+      	payload = bottle.request.json
+     	print(payload)
+     try:
+	service_tag = str(payload['service_tag'])
+	if len(service_tag) == 0 | =< 6:
+	raise Exception()
+	print("Datos validos")
+     except:
+	print("Datos invalidos")
+	raise HTTPError(400)
+     raise bottle.HTTPError(501, "Error")
     # bottle.response.content_type = "application/json"
     # data = bottle.request.json
     # filename = ""
@@ -53,6 +67,10 @@ def info_by_code(*args, code=None, **kwargs):
 def info_by_code(*args, code=None, **kwargs):
     payload = bottle.request.json
     print(payload)
+
+    try:
+	service_tag_list = str(payload['service_taf'])
+	print("Datos Validos")
     # bottle.response.content_type = "application/json"
     # data = bottle.request.json
     # filename = ""
