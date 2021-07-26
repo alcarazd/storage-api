@@ -7,6 +7,9 @@ from modules.dell_warranty import payload
 def alamacenar_dato(service_tag = None):
 	print("Desde Modulo")
 	print(service_tag)
+	para_almacenar = {"service_tag": service_tag, "fecha": fecha}
+	json_text = json.dumps(para_almacenar)
+	store_string(/servicetag_folder, para_almacenar)
 	return("Exito")
 
 
