@@ -19,10 +19,7 @@ app = bottle.Bottle()
 app.mount("/auth", routes.auth.app)
 app.mount("/storage", routes.storage.app)
 app.mount("/store", routes.dell_warranty.app)
-app.mount("/dell/info", routes.dell_warranty.app)
-app.mount("/dell/store/<code>", routes.dell_warranty.app)
-app.mount("/dell/info/list", routes.dell_warranty.app)
-app.mount("/dell/void", routes.dell_warranty.app)
+app.mount("/dell", routes.dell_warranty.app)
 
 
 
