@@ -1,7 +1,8 @@
 import json
 from datetime import datetime
 from modules.storage import (
-    store_string, store_bytes
+    store_string, store_bytes,
+    query_storage, get_storage_file
 )
 
 
@@ -26,15 +27,18 @@ def get_device_id(st=None):
     print(st, fecha)
     print("Exito")
 
-def get_device_list(devices=None):
-    print("Desde modulo all_device")
-    print(st, fecha)
-    print("Exito")
-
-def get_device_id(warranty=None):
-    print("Desde modulo void_report")
-    print(st, fecha)
-    print("Exito")
+def get_device_list(devices=None, st=None):
+    query_result = query_storage(
+        "dell/registros",
+    )
+    if devices is None and st is None:
+        return query_result["content"]
+    if st is not None:
+        return [
+           r
+           for r in query_result["content"]
+           if st in r
+        ]
 
 def get_device_out_warranty(*args, **kwargs):
     pass

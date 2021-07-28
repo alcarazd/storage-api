@@ -31,32 +31,20 @@ def store(*args, **kwargs):
 
 @app.get("/info/list")
 def all_device(*args, **kwargs):
-    payload = bottle.request.json
-    print(payload)
     try:
-       devices = str(payload['device_list'])
-       print("datos validos")
-       respuesta = get_device_list(**payload)
-       raise bottle.HTTPError(201)
+       respuesta = get_device_list()
     except:
-        print("datos invalidos")
-        raise bottle.HTTPError(400)
-    raise bottle.HTTPError(500)
+        raise bottle.HTTPError(500, "Error interno")
+    raise bottle.HTTPError(200, respuesta)
 
 
 @app.get("/info/<code>")
-def devices_per_st(*args,**kwargs):
-    payload = bottle.request.json
-    print(payload)
+def devices_per_st(*args,code=None, **kwargs):
     try:
-        device = str(payload['device_id'])
-        print("datos validos")
-        respuesta = get_device_id(**payload)
-        raise bottle.HTTPError(201)
+        respuesta = get_device_list(st=code)
     except:
-        print("datos invalidos")
         raise bottle.HTTPError(400)
-    raise bottle.HTTPError(500)
+    raise bottle.HTTPError(200, respuesta)
 
 
 @app.get("/void")
