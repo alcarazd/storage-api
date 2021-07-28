@@ -7,86 +7,87 @@ from modules.auth import auth_required
 from modules.storage import store_string, get_storage_file
 from models.example import ExampleRecord
 
+import bottle
+from modules.bottles import BottleJson
+from modules.dell_warranty import add_st
+
 app = BottleJson()
 
 @app.get("/")
-def index():
-    payload = bottle.request.query
-    print(bottle.request.query)
-    print(payload.dict)
-    raise bottle.HTTPError(501, 'Error')
 
 
-@app.get("/store")
+@app.post("/store")
 def store(*args, **kwargs):
-
-	payload = bottle.request.query
-    	print(bottle.request.query)
-    	print(payload.dict)
+    payload = bottle.request.query
+    print(payload.dict)
     try:
-	service_tag = str(payload['service_tag'])
-	fecha = str(payload{'fecha'})
-	if len(service_tag) == 0 | =< 6:
-	raise Exception()
-	fecha = str(payload(['fecha'])
-        year, month, date = [int(x) for x in fecha.split("-")]
-        print("Datos validos")
+	#
+       fecha = str(payload['fecha'])
+       year, month, date = [int(x) for x in fehca.split("-")]
+       print("datos validos")
+       respuesta =  add_st(**payload)
+       raise bottle.HTTPError(201)
     except:
-        print("Datos invalidos")
-	raise HTTPError(400)
-    raise bottle.HTTPError(501, "Error")
+       print("Datos invalidos")
+       raise bottle.HTTPError(400)
+    raise bottle.HTTPError(500)
+    
+    try:
+	st = str(payload['service_tag'])
+	if len(st) == 0:
+	print("datos validos")
+	respuesta = add_st(**payload)
+	raise bottle.HTTPError(201)
+     except:
+	print("datos invalidos")
+    	raise bottle.HTTPError(400)
+     raise bottle.HTTPError(500)
 
-    #bottle.response.content_type = "application/json"
-    # data = bottle.request.json
-    # filename = ""
-    # store_string("dell", filename, json_dumps(data))
-    #return dict(code=501, message = "Not Implemented")
 
 
 @app.get("dell/info/<code>")
-def info_by_code(*args, code=None, **kwargs):
-      	payload = bottle.request.json
-     	print(payload)
-     try:
-	service_tag = str(payload['service_tag'])
-	if len(service_tag) == 0 | =< 6:
-	raise Exception()
-	print("Datos validos")
-     except:
-	print("Datos invalidos")
-	raise HTTPError(400)
-     raise bottle.HTTPError(501, "Error")
-    # bottle.response.content_type = "application/json"
-    # data = bottle.request.json
-    # filename = ""
-    # store_string("dell", filename, json_dumps(data))
-    # pass
-     return dict(code=501, message = "Not Implemented")
-
-@app.get("dell/info/list")
-def info_by_code(*args, code=None, **kwargs):
+def devices_per_st(*args,**kwargs):
     payload = bottle.request.json
     print(payload)
-
     try:
-	service_tag_list = str(payload['service_taf'])
-	print("Datos Validos")
-    # bottle.response.content_type = "application/json"
-    # data = bottle.request.json
-    # filename = ""
-    # store_string("dell", filename, json_dumps(data))
-    # pass
-    return dict(code=501, message = "Not Implemented")
+       device = str(payload['device_id'])
+       print("datos validos")
+       respuesta = get_device_id(**payload)
+       raise bottle.HTTPError(201)
+    except:
+	print("datos invalidos")
+	raise bottle.HTTPError(400)
+    raise bottle.HTTPError(500)
+
+
+@app.get("dell/info/list")
+def all_device(*args, **kwargs):
+    payload = bottle.request.json
+    print(payload)
+    try:
+       devices = str(payload['device_list'])
+       print("datos validos")
+       respuesta = get_device_list(**payload)
+       raise bottle.HTTPError(201)
+    except:
+        print("datos invalidos")
+        raise bottle.HTTPError(400)
+    raise bottle.HTTPError(500)
 
 
 @app.get("dell/void")
 def void_report(*args, **kwargs):
     payload = bottle.request.json
     print(payload)
-    # bottle.response.content_type = "application/json"
-    # data = bottle.request.json
-    # filename = ""
-    # store_string("dell", filename, json_dumps(data))
-    return dict(code=501, message = "Not Implemented")
+    try:
+       warranty = str(payload['out_warranty'])
+       print("datos validos")
+       respuesta = get_device_out_warranty(**payload)
+       raise bottle.HTTPError(201)
+    except:
+        print("datos invalidos")
+        raise bottle.HTTPError(400)
+    raise bottle.HTTPError(500)
+
 
 
