@@ -10,6 +10,9 @@ from models.example import ExampleRecord
 import bottle
 from modules.bottles import BottleJson
 from modules.dell_warranty import add_st
+from modules.dell_warranty import get_device_id
+from modules.dell_warranty import get_device_list
+from modules.dell_warranty import get_device_out_warranty
 
 app = BottleJson()
 
