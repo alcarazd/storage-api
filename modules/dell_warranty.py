@@ -1,17 +1,28 @@
 from datetime import datetime
-from modules.dell_warranty import payload
 
 
 
-@app.get("/store")
-def alamacenar_dato(service_tag = None):
-	print("Desde Modulo")
-	print(service_tag)
-	para_almacenar = {"service_tag": service_tag, "fecha": fecha}
-	json_text = json.dumps(para_almacenar)
-	store_string(/servicetag_folder, para_almacenar)
+
+
+def add_st(fecha: None, st: None):
+	print("Desde Modulo store")
+	print(fecha, st)
 	return("Exito")
 
+def  get_device_id(st: None):
+	print("Desde modulo device_per_St")
+	print(st, fecha)
+	print("Exito")
+
+def  get_device_list(devices: None):
+        print("Desde modulo all_device")
+        print(st, fecha)
+        print("Exito")
+
+def  get_device_id(warranty: None):
+        print("Desde modulo void_report")
+        print(st, fecha)
+        print("Exito")
 
 
 def get_timestamp():
