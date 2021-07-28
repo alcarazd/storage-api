@@ -1,4 +1,8 @@
 from datetime import datetime
+from modules.dell_warranty import get_device_id
+from modules.dell_warranty import get_device_list
+from modules.dell_warranty import get_device_out_warranty
+
 
 
 
@@ -7,19 +11,19 @@ from datetime import datetime
 def add_st(fecha: None, st: None):
 	print("Desde Modulo store")
 	print(fecha, st)
-	return("Exito")
+	print("Exito")
 
-def  get_device_id(st: None):
+def get_device_id(st: None):
 	print("Desde modulo device_per_St")
 	print(st, fecha)
 	print("Exito")
 
-def  get_device_list(devices: None):
+def get_device_list(devices: None):
         print("Desde modulo all_device")
         print(st, fecha)
         print("Exito")
 
-def  get_device_id(warranty: None):
+def get_device_id(warranty: None):
         print("Desde modulo void_report")
         print(st, fecha)
         print("Exito")
