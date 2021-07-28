@@ -46,24 +46,7 @@ def store(*args, **kwargs):
     	raise bottle.HTTPError(400)
      raise bottle.HTTPError(500)
 
-
-
-@app.get("dell/info/<code>")
-def devices_per_st(*args,**kwargs):
-    payload = bottle.request.json
-    print(payload)
-    try:
-       device = str(payload['device_id'])
-       print("datos validos")
-       respuesta = get_device_id(**payload)
-       raise bottle.HTTPError(201)
-    except:
-	print("datos invalidos")
-	raise bottle.HTTPError(400)
-    raise bottle.HTTPError(500)
-
-
-@app.get("dell/info/list")
+@app.get("/info/list")
 def all_device(*args, **kwargs):
     payload = bottle.request.json
     print(payload)
@@ -78,7 +61,23 @@ def all_device(*args, **kwargs):
     raise bottle.HTTPError(500)
 
 
-@app.get("dell/void")
+@app.get("/info/<code>")
+def devices_per_st(*args,**kwargs):
+    payload = bottle.request.json
+    print(payload)
+    try:
+       device = str(payload['device_id'])
+       print("datos validos")
+       respuesta = get_device_id(**payload)
+       raise bottle.HTTPError(201)
+    except:
+	print("datos invalidos")
+	raise bottle.HTTPError(400)
+    raise bottle.HTTPError(500)
+
+
+
+@app.get("/void")
 def void_report(*args, **kwargs):
     payload = bottle.request.json
     print(payload)
