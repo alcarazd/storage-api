@@ -49,14 +49,11 @@ def devices_per_st(*args,code=None, **kwargs):
 
 @app.get("/void")
 def void_report(*args, **kwargs):
-    payload = bottle.request.json
-    print(payload)
     try:
-        warranty = str(payload['out_warranty'])
-        print("datos validos")
-        respuesta = get_device_out_warranty(**payload)
-        raise bottle.HTTPError(201)
+       respuesta = get_device_out_warranty()
     except:
-        print("datos invalidos")
-        raise bottle.HTTPError(400)
-    raise bottle.HTTPError(500)
+	raise bottle.HTTPError(500, "Error interno")
+    raise bottle.HTTPError(200, respuesta)
+
+r = request.get("https://www.dell.com/support/home/en-us/product-support/{payload['st']}")
+
