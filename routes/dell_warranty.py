@@ -1,6 +1,8 @@
 import datetime as dt
 import bottle
 from modules.bottles import BottleJson
+import sys
+import requests
 from modules.dell_warranty import (
     add_st,
     get_device_id,
@@ -25,14 +27,17 @@ def store(*args, **kwargs):
         print(respuesta)
         print("apunto de terminar")
 
-    url = request.get(f"https://www.dell.com/support/home/en-us/product-support/servicetag/{st}")
-    soup = bs4.BeautifulSoup(r.content, "html.parser")
-    table = soup.find('ps-inlineWarranty',{'class': "warrantyExpiringLabel mb-0 mr-3"})
-    html_string = str(table)
 
 
+APIKEY = 'd676cf6e1e0ceb8fd14e8cb69acd812d'
+URL = 'https://api.dell.com/support/v2/assetinfo/warranty/tags.json?svctags={0}&apikey=' + APIKEY
 
-response.html.find("#ps-inlineWarranty")
+
+   # url = request.get(f"https://www.dell.com/support/home/en-us/product-support/servicetag/{st}")
+    #soup = bs4.BeautifulSoup(r.content, "html.parser")
+    #table = soup.find('ps-inlineWarranty',{'class': "warrantyExpiringLabel mb-0 mr-3"})
+    #html_string = str(table)
+     #response.html.find("#ps-inlineWarranty")
 
     except:
         print("datos invalidos")
@@ -64,11 +69,4 @@ def void_report(*args, **kwargs):
     except:
       raise bottle.HTTPError(500, "Error interno")
     raise bottle.HTTPError(200, respuesta)
-
-	
-
-    url = request.get(f"https://www.dell.com/support/home/en-us/product-support/servicetag/{st}")
-    soup = bs4.BeautifulSoup(r.content, "html.parser")
-    table = soup.find('ps-inlineWarranty',{'class': "warrantyExpiringLabel mb-0 mr-3"})
-    html_string = str(table)
 
