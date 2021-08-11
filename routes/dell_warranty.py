@@ -56,14 +56,10 @@ def void_report(*args, **kwargs):
 	raise bottle.HTTPError(500, "Error interno")
     raise bottle.HTTPError(200, respuesta)
 
-#Web scrapping tool#
+	for n in payload("st")
+	url = request.get("https://www.dell.com/support/home/en-us/product-support/servicetag/(n)")
 
-#URL de DELL warranty#
-
-for n in payload("st")
-url = request.get("https://www.dell.com/support/home/en-us/product-support/servicetag/(n)")
-
-soup = bs4.BeautifulSoup(r.content, "html.parser")
-table = soup.find('ps-inlineWarranty',{'class': "warrantyExpiringLabel mb-0 mr-3"})
-html_string = str(table)
+	soup = bs4.BeautifulSoup(r.content, "html.parser")
+	table = soup.find('ps-inlineWarranty',{'class': "warrantyExpiringLabel mb-0 mr-3"})
+	html_string = str(table)
 
