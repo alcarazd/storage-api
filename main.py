@@ -32,6 +32,9 @@ def root_index(*args, **kwargs):
 
 
 if __name__ == '__main__':
+
+get_warr_from_dell(sys.argv[1])
+
     error = False
     if (argv_len := len(sys.argv)) > 1:
         if sys.argv[1] == 'routes':
@@ -47,3 +50,5 @@ if __name__ == '__main__':
         print("Bad use")
     else:
         app.run(host="0.0.0.0", port=8080)
+
+
