@@ -59,7 +59,6 @@ def void_report(*args, **kwargs):
 #Web scrapping tool#
 
 #URL de DELL warranty#
-#Prueba de cambio de nombre#
 
 for n in payload("st")
 url = request.get("https://www.dell.com/support/home/en-us/product-support/servicetag/(n)")
