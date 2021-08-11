@@ -59,6 +59,7 @@ def void_report(*args, **kwargs):
 #Web scrapping tool#
 
 #URL de DELL warranty#
+#Prueba de cambio de nombre#
 url = request.get("https://www.dell.com/support/home/en-us/product-support/servicetag/(payload{st})")
 
 soup = bs4.BeautifulSoup(r.content, "html.parser")
