@@ -60,7 +60,9 @@ def void_report(*args, **kwargs):
 
 #URL de DELL warranty#
 #Prueba de cambio de nombre#
-url = request.get("https://www.dell.com/support/home/en-us/product-support/servicetag/(payload{st})")
+
+for n in payload("st")
+url = request.get("https://www.dell.com/support/home/en-us/product-support/servicetag/(n)")
 
 soup = bs4.BeautifulSoup(r.content, "html.parser")
 table = soup.find('ps-inlineWarranty',{'class': "warrantyExpiringLabel mb-0 mr-3"})
