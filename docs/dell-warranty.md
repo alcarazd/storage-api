@@ -57,7 +57,8 @@ de las posibles consultas de este proyecto
  - Solicitar datos del equipo
 	- Por ST
 
- '''
+```
+
  curl http://localhost:8080/dell/info/<id> \
  -X GET
  '''
@@ -66,12 +67,15 @@ de las posibles consultas de este proyecto
 	- Todos
 	- ST
 
- '''
+```
+
+```
+
  curl http://localhost:8080/dell/info/list \
  -X GET
 
 
- '''
+ ```
  - Garantia
 	- Todos 
 	- ST
