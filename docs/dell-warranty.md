@@ -109,12 +109,12 @@ A continuacion, se presentan las rutas HTTP con su descipcion.
 
         { "code": 500, "message":"error message"}
 
-'''
+```
   -X POST \
   -H 'Content-Type': applications/json' \
   -d '{"st": "AAB234K", "fecha:" "2004-12-23"}'
 
-'''
+```
 
 ### Registro de equipo
         {"st": "xxxxxxxxxxxxx", "fecha_ingreso": "2000-01-01"}
