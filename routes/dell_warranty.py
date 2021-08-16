@@ -12,7 +12,13 @@ from modules.dell_warranty import (
 
 app = BottleJson()
 
+# Default route
+@app.get("/")
 
+
+# Route to add a device
+# curl example
+# curl http://localhost:8080/dell/store -X POST -H 'Content-Type: application/json' -d '{"st": "QQP126K", "fecha": "12-12-2020"}'
 @app.post("/store")
 def store(*args, **kwargs):
     payload = bottle.request.json
@@ -44,6 +50,10 @@ URL = 'https://api.dell.com/support/v2/assetinfo/warranty/tags.json?svctags={0}&
         raise bottle.HTTPError(400, "Invalid data")
     raise bottle.HTTPError(201, respuesta)
 
+#Route to get devices list
+#curl example
+#curl http://localhost:8080/dell/info/list -X GET 
+
 @app.get("/info/list")
 def all_device(*args, **kwargs):
     try:
@@ -52,6 +62,10 @@ def all_device(*args, **kwargs):
         raise bottle.HTTPError(500, "Error interno")
     raise bottle.HTTPError(200, respuesta)
 
+
+#Route to get a device for st or date
+#curl example
+#curl http://localhost:8080/dell/info/list/QQP126K -X GET
 
 @app.get("/info/<code>")
 def devices_per_st(*args,code=None, **kwargs):
