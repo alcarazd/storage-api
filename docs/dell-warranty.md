@@ -367,3 +367,15 @@ curl http://localhost:8080/dell/info/list -X GET
 ```
 
 
+- El usuario registro los datos incorrectos, por lo cual desea actualizarlos.
+ - Para actualizarlos, es necesario ingresar los campos ya registrados, con diferencia de la fecha que sera reemplazada
+ - Si el usuario registra los datos incorrectamente, se mostrara un error HTML 400 con un mensaje de
+    "Datos invalidos"
+ - Ejemplo de curl para la actualizacion con POST:
+
+```
+curl http://localhost:8080/dell/store -X POST -H 'Content-Type: application/json' -d '{"st": "QQP126K", "fecha": "12-10-2020"}'
+
+```
+
+
