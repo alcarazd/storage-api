@@ -5,27 +5,35 @@ from modules.storage import (
     query_storage, get_storage_file
 )
 
+#Function to add a device
 
 def add_st(fecha=None, st=None):
     print("Desde Modulo store")
     print(fecha, st)
     print("Exito")
+# data that is goind to be stored
     almacenable = {
         "service_tag": st,
         "fecha_de_ingreso": fecha,
     }
+# how date is goint to be stored and where
     nombre_de_archivo = f"{st}-{fecha}.json"
     datos = store_string(
+# File name
         "dell/registros",
         nombre_de_archivo,
         json.dumps(almacenable)
-    )
+    ) #returns data
     return datos
+
+## function to get a device by st or date
 
 def get_device_id(st=None):
     print("Desde modulo device_per_St")
     print(st, fecha)
     print("Exito")
+
+# function to get all devices stored 
 
 def get_device_list(devices=None, st=None):
     query_result = query_storage(
@@ -42,6 +50,8 @@ def get_device_list(devices=None, st=None):
 
 def get_device_out_warranty(*args, **kwargs):
     pass
+
+#Function to get details from DELL webpage
 
 def get_warr_from_dell(svctag):
     res = requests.get(URL.format(svctag))
