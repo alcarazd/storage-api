@@ -56,9 +56,22 @@ de las posibles consultas de este proyecto
 
  - Solicitar datos del equipo
 	- Por ST
+
+ '''
+ curl http://localhost:8080/dell/info/<id> \
+ -X GET
+ '''
+
  - Lista de equipos
 	- Todos
 	- ST
+
+ '''
+ curl http://localhost:8080/dell/info/list \
+ -X GET
+
+
+ '''
  - Garantia
 	- Todos 
 	- ST
@@ -96,6 +109,12 @@ A continuacion, se presentan las rutas HTTP con su descipcion.
 
         { "code": 500, "message":"error message"}
 
+'''
+  -X POST \
+  -H 'Content-Type': applications/json' \
+  -d '{"st": "AAB234K", "fecha:" "2004-12-23"}'
+
+'''
 
 ### Registro de equipo
         {"st": "xxxxxxxxxxxxx", "fecha_ingreso": "2000-01-01"}
