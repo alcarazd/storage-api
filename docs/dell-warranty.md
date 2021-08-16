@@ -331,3 +331,39 @@ proximos a expirar apareceran, para que el personal comience con la logistica de
 | Creacion de mock-ups     | _b2f11a0798261fd3028dd8bee329dd39a6492628_ |
 | Explicacion de mock-ups     | _b16301b72edddf892f423d443e9d09072a58417f_ |
 
+# Casos de uso 
+
+- El usuario desea agregar un nuevo equipo
+ - Para ello el usuario debe ingresar los campos requeridos para almacenar un equipo, los cuales son:
+	st(servicetag) y fecha de ingreso.
+ - Si el usuario registra datos invalidos, se le mostrara un eror HTML 400 con el mensaje 
+   "Datos invalidos"
+  - Ejemplo de curl de registro exitoso con POST:
+```
+curl http://localhost:8080/dell/store -X POST -H 'Content-Type: application/json' -d '{"st": "QQP126K", "fecha": "12-12-2020"}'
+
+```
+
+- El usuario desea consultar la garantia de un equipo en especifico.
+ - En entos casos el st es el identificador del equipo con el cual pueden consultar
+   la informacion directamente.
+ - Si el usuario utiliza una ruta o un st que sea incorrecto o no exista, se le mostrara un error HTML 500
+   con el mensaje de "Error interni"
+ - Ejemplo de curl para una consulta especifica con GET
+```
+curl http://localhost:8080/dell/info/list/QQP126K -X GET
+
+```
+
+ - El usuario desea consultar todas las garantias de los equipos.
+  - Para ello el usuario debe utilizar la ruta especifica.
+  - Si el usuario utiliza una ruta o un ID incorrecto o que no exista, se le mostrara un error HTML 500 con el mensaje
+    "Error interno"
+  - Ejemplo de curl para mostrar todas las garantias con GET.
+
+```
+curl http://localhost:8080/dell/info/list -X GET 
+
+```
+
+
