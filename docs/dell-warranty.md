@@ -379,3 +379,51 @@ curl http://localhost:8080/dell/store -X POST -H 'Content-Type: application/json
 ```
 
 
+# Planeacion del desarrollo del frontend
+
+El desarrollo del frontend requiere de un análisis profundo en cuanto a las funcionalidades del proyecto se refiere.
+Todas y cada una de las funciones deben de ir acore con lo establecido en el backend. La base de dicha interfaz será
+estructura en un archivo HTML, que en conjunto con funciones de JavaScrip y CSS se le dara vida al proyecto, y el proposito 
+es que la interfaz sea amigable para el usuario.
+
+- El servidor debe poder procesar las consultas para GET, UPDATE y POST, de las siguientes variables dentro de la API:
+numerios de serie y fechas de ingreso de los equipos.
+
+- Que las validaciones para el registro de datos incorrectos esten funcionando para evitar errores en la extraccion de la
+informacion de la pagina de DELL.
+
+- Que el inicio de sesion de la pagina funcione correctamente ademas de que asigne los permisos correspondientes
+
+## Para el login se plantea lo siguiente
+
+Que se presenten dos campos de texto en los que se ingresen las credenciales del usuario los cuales son "usuario" y 
+"password" respectivamente, y con un boton para ingresar que se encuentre debajo. Los usuarios ya se encuentran creados.
+
+Se planea agregar el logo y colores de la empresa.
+
+![Login](https://github.com/alcarazd/storage-api/blob/master/docs/assets/dell-warranty-0001-login_page.png)
+
+## Para la pagina de agregar equipos se plantea lo siguiente:
+
+Que se presenten dos campos de texto en los cuales se registren los datos del equipo adquirido los cuales son el 
+servicetag y la fecha de registro del equipo respectivamente, y con un boton debajo para agregar el equipo
+una vez llenados los datos solicitados.
+
+![Add](https://github.com/alcarazd/storage-api/blob/master/docs/assets/dell-warranty-0002-add_page.png)
+
+## Para la pagina de eliminar equipos se plantea lo siguiente:
+
+Que se presente un campo de texto en el cual se ingrese servicetag de un equipo ya registrado, con un checkbox 
+de confirmacion debajo antes del boton de eliminar.
+
+![Delete](https://github.com/alcarazd/storage-api/blob/master/docs/assets/dell-warranty-0003-delete-page.png)
+
+## Para la pagina de inicio se plantea lo siguiente:
+
+Se plantea que se observen en el inicio los servicetag de los equipos los cuales esten proximos a expirar, agregar 
+una barra de busqueda en la parte superior para realizar una busqueda especifica por servicetag. Esta pagina debe de ser
+capaz de realizar consultas y ejecutar la funcion para mostrar los equipos.
+
+![Info](https://github.com/alcarazd/storage-api/blob/master/docs/assets/dell-warranty-0004_info_page.png)
+
+# Documentacion para continuar el trabajo
