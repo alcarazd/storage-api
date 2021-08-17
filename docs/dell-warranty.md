@@ -427,3 +427,27 @@ capaz de realizar consultas y ejecutar la funcion para mostrar los equipos.
 ![Info](https://github.com/alcarazd/storage-api/blob/master/docs/assets/dell-warranty-0004_info_page.png)
 
 # Documentacion para continuar el trabajo
+
+Se encuentra como pendiente la puesta en marcha de la funcion correspondiente a la consulta de informacion de los equipos,
+de la se quiere extraer la informacion de la fecha de expiracion de los equipos que se encuentran almacenados en la funcion
+de store. Dado que la pagina de DELL que se encuentra disponible trabaja de una forma en la que arroja una pagina tras otra
+dificultando la extraccion de la informacion, el cuerpo de la funcion ya se encuentra en _modules_ y _routes_ pero es
+necesario contar una _APIKEY_ para poder utilizar el API en el cual se encuentra el inventario de equipos de DELL,
+el cual contiene los atributos y metricas de los equipos.
+
+Para obtener la _APIKEY_ es necesario entrar al portal de DELL para estar en contacto con los encargados, esto
+puede tomar alrededor de 2 meses para personas que no cuentan con un puesto de tecnico en el portal de DELL.
+
+Una vez obtenida la _APIKEY_ en _routes_ se deben de reemplazar el valor de la _APIKEY_ por la correspondiente y en _URL_
+Se debe agregar la liga correspondiente al area con acceso a las metricas y atributos de los equipos.
+
+Dentro de _modules_ se encuentra la funcion _get__warr__from__dell_ en la cual ya se indica la estructura de consulta
+a los recursos en _res_ por parte del _URL_ , se agrego una verificacion sobre el estado de la liga.
+
+En la parte inferior se buscan las variables correspondientes a la garantia, descripcion del equipo(modelo), cuando 
+terminan las garantias y el dia de entrega de los equipos, para imprimir los datos.
+
+Tambien se muestra la relacion del estado de la garantia contra el nivel de soporte correspondiente.
+
+Solo se deben de modificar los datos que se desean consultar y mostrar, se pueden ver el resto de atributos disponibles
+desde la API.
